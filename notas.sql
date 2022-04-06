@@ -6,7 +6,7 @@ DROP DATABASE IF EXISTS notasdb;
 CREATE DATABASE notasdb;
 USE notasdb;
 --
--- tirame la tabla usuarios si existe y volvela a levnatar
+-- tirame la tabla usuarios si existe y volvela a levantar
 --
 DROP TABLE IF EXISTS `users`;
 
@@ -116,6 +116,3 @@ CREATE TABLE `notas_category` (
 INSERT INTO notasdb.notas_category
 (id, notas_id, category_id)
 VALUES (1, 3, 2),(2, 6, 2),(3,4,1),(4, 5, 1),(5, 5, 3),(6, 7, 3),(7, 8, 4),(8, 10, 4), (9, 2, 4), (10, 1, 4);
-
-
-
