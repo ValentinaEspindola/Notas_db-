@@ -55,7 +55,7 @@ CREATE TABLE `category` (
 --
 
 
-INSERT INTO `category` values (1, 'Contabilidad'),(2,'Musica'),(3, 'Economia'),(4, 'Interes general');
+INSERT INTO `category` values (1, 'Contabilidad'),(2,'Musica'),(3, 'Economia'),(4, 'Interes general'),(5, 'Derecho'),(6, 'Quehaceres'),(7, 'Gimnasia'),(8, 'Ropa'),(9, 'Recordatorios'), (10, 'Lugares');
 
 
 
