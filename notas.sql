@@ -92,6 +92,31 @@ VALUES (1, 'Day of the Wacko (Dzien swira)', 'Implemented intermediate paralleli
 (6, 'Canciones de Shazam', 'Fundamental didactic pricing structure', '2022-03-30 16:37:13', '2022-01-18 01:17:06',1, 6),(7, 'Resumen de economia', 'Open-architected multi-state artificial intelligence', '2021-09-03 05:45:12', '2021-05-13 15:27:15',1, 7),(8, 'Junk Mail (Budbringeren)', 'Focused disintermediate matrix', '2021-05-24 17:03:11', '2021-06-24 06:44:24',1,8),(9, 'Get Out of My Room', 'Inverse client-server process improvement', '2022-03-09 19:37:28', '2021-09-30 03:33:52',1,9),(10, 'Village People', 'Fully-configurable incremental emulation', '2021-09-13 01:18:01', '2021-08-30 09:25:49',1, 10);
 SET FOREIGN_KEY_CHECKS = 1;
 
+
+
+DROP TABLE IF EXISTS `register`;
+
+CREATE TABLE `register` (
+  `id` int(10) unsigned NOT null,
+  `accion` varchar(100) COLLATE utf8_unicode_ci NOT NULL,  
+  `notas_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `register_notas_id_foreign` (`notas_id`),
+  CONSTRAINT `register_notas_id_foreign` FOREIGN KEY (`notas_id`) REFERENCES `notas` (`id`)
+) 
+
+ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+--
+-- Dumping data for table `notas`
+--
+SET FOREIGN_KEY_CHECKS = 0;
+INSERT INTO notasdb.register
+(id, accion, notas_id)
+VALUES (1, 'Creada', 2),(2, 'Eliminada', 3), (3, 'Actualizada', 8),(4, 'Eliminada', 3),(5, 'Actualizada', 4),(6, 'Actualizada', 7),(7, 'Actualizada', 5),(8, 'Actualizada', 9),(9 , 'Actualizada', 1),(10, 'Eliminada', 1);
+SET FOREIGN_KEY_CHECKS = 1;
+
 --
 -- Table structure for table pivot `notas_category`
 --
