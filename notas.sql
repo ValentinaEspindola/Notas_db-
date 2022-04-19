@@ -98,7 +98,8 @@ DROP TABLE IF EXISTS `register`;
 
 CREATE TABLE `register` (
   `id` int(10) unsigned NOT null,
-  `accion` varchar(100) COLLATE utf8_unicode_ci NOT NULL,  
+  `action1` varchar(100) COLLATE utf8_unicode_ci NOT NULL, 
+  `date1` timestamp NULL DEFAULT NULL,
   `notas_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `register_notas_id_foreign` (`notas_id`),
@@ -113,8 +114,8 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 --
 SET FOREIGN_KEY_CHECKS = 0;
 INSERT INTO notasdb.register
-(id, accion, notas_id)
-VALUES (1, 'Creada', 2),(2, 'Eliminada', 3), (3, 'Actualizada', 8),(4, 'Eliminada', 3),(5, 'Actualizada', 4),(6, 'Actualizada', 7),(7, 'Actualizada', 5),(8, 'Actualizada', 9),(9 , 'Actualizada', 1),(10, 'Eliminada', 1);
+(id, date1, action1  ,notas_id)
+VALUES (1, '2022-03-30 16:37:13','Creada', 2),(2,'2022-03-30 16:37:13' ,'Eliminada', 3), (3,'2022-03-30 16:37:13', 'Actualizada', 8),(4, '2022-01-18 01:17:06','Eliminada', 3),(5,'2022-01-18 01:17:06' ,'Actualizada', 4),(6,'2022-01-16 09:19:06' ,'Actualizada', 7),(7,'2022-01-24 09:17:06', 'Actualizada', 5),(8, '2021-01-18 01:17:06' ,'Actualizada', 9),(9 ,'2021-01-18 01:17:08' ,'Actualizada', 1),(10, '2022-01-18 01:17:06', 'Eliminada', 1);
 SET FOREIGN_KEY_CHECKS = 1;
 
 --
